@@ -16,16 +16,17 @@ public class Customer {
     }
 
     public void printOwing() {
-        double outstanding = 0.0;
-
         printBanner();
+        double outstanding = getOutstanding();
+        printDetails(outstanding);
+    }
 
-        // calculate outstanding
+    private double getOutstanding() {
+        double outstanding = 0.0;
         for (Order order : orders) {
             outstanding += order.getAmount();
         }
-
-        printDetails(outstanding);
+        return outstanding;
     }
 
     private void printDetails(double outstanding) {
