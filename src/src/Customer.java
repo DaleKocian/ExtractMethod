@@ -25,16 +25,18 @@ public class Customer {
             outstanding += order.getAmount();
         }
 
-        //print details
+        printDetails(outstanding);
+    }
+
+    private void printDetails(double outstanding) {
         System.out.println("Name: " + name);
         System.out.println("Amount = " + outstanding);
     }
 
     void printBanner() {
-        // print banner
-        System.out.println ("**************************");
-        System.out.println ("***** Customer Owes ******");
-        System.out.println ("**************************");
+        System.out.println("**************************");
+        System.out.println("***** Customer Owes ******");
+        System.out.println("**************************");
     }
 
     public List<Order> getOrders() {
