@@ -18,10 +18,7 @@ public class Customer {
     public void printOwing() {
         double outstanding = 0.0;
 
-        // print banner
-        System.out.println("**************************");
-        System.out.println("***** Customer Owes ******");
-        System.out.println("**************************");
+        printBanner();
 
         // calculate outstanding
         for (Order order : orders) {
@@ -31,6 +28,13 @@ public class Customer {
         //print details
         System.out.println("Name: " + name);
         System.out.println("Amount = " + outstanding);
+    }
+
+    void printBanner() {
+        // print banner
+        System.out.println ("**************************");
+        System.out.println ("***** Customer Owes ******");
+        System.out.println ("**************************");
     }
 
     public List<Order> getOrders() {
